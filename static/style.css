@@ -1,0 +1,116 @@
+/* style.css */
+
+/* General body styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color: #222;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Header styling */
+h1 {
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+/* Form styling */
+form {
+    width: 350px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    backdrop-filter: blur(10px);
+    margin-bottom: 15px;
+}
+
+/* Labels and inputs styling */
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+input[type="file"],
+select,
+button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Input file and select dropdown styling */
+input[type="file"] {
+    background-color: #f7f7f7;
+    border: 2px dashed #bbb;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+input[type="file"]:hover {
+    background-color: #ffe0e6;
+}
+
+select {
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+select:hover {
+    background-color: #ffe0e6;
+}
+
+/* Button styling */
+button {
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4b84e9;
+    transform: scale(1.05);
+}
+
+/* Detected image styling */
+img {
+    max-width: 300px;
+    max-height: 300px;
+    border: 5px solid #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    object-fit: contain; /* Maintain aspect ratio within bounds */
+}
+
+/* Detected image container */
+.detected-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+

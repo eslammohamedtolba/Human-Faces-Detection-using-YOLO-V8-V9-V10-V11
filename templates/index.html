@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Object Detection</h1>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <label for="image">Upload Image:</label>
+        <input type="file" id="image" name="image" accept="image/*" required><br><br>
+        <label for="model">Choose Model:</label>
+        <select id="model" name="model" required>
+            <option value="yolov8">YOLOv8</option>
+            <option value="yolov9">YOLOv9</option>
+            <option value="yolov10">YOLOv10</option>
+            <option value="yolov11">YOLOv11</option>
+        </select><br><br>
+        <button type="submit">Detect</button>
+    </form>
+
+    {% if detected_image %}
+        <img src="data:image/png;base64,{{ detected_image }}" alt="Detected Image">
+    {% endif %}
+</body>
+</html>
